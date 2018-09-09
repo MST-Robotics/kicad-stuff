@@ -1,0 +1,18 @@
+To populate the boxes on the layout of the scematic, you should open the Page Settings dialog. From here:
+
+* Select size "B 11x17in"
+* Select orientation "Landscape"
+* Press the "<<<" button next to "issue date" EVERY TIME a new change occurs
+* Fill in version information (major.minor.revision)
+  - A major release is one which breaks backwards compatability
+  - A minor release is one which adds new features while maintaining backwards compatability
+  - A revision is a fix which does not change the intended functionality
+  - (make sure the new version is listed in the commit message)
+* Fill in the design title in the "Title" field
+* Fill in "Missouri University of Science and Technology - Underwater Robotics Team" in the "Company" ield
+* Fill in a brief description of the project in the "Comment1" field
+* Fill in the github repo URL in the "Comment2" field
+  - For most projects, this will be "https://github.com/MST-Robotics/TITAN-Electrical.git"
+* Fill in the github repo branch in the "Comment3" field
+* Fill in the legal stuff into the "Comment4" field
+ - For most projects, this will be "NOTICE: The Missouri S&T Underwater Robotics Team makes no claim to the accuracy or usability of this document. Email mstrobotics@mst.edu for more information. Printed copies are not maintained."
