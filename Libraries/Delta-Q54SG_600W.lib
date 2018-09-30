@@ -1,0 +1,23 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# StepDownConverter
+#
+DEF StepDownConverter REG 0 40 Y Y 1 F N
+F0 "REG" -275 -200 50 H V C CNN
+F1 "StepDownConverter" -275 -725 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+T 0 -270 -600 50 0 0 0 600W Normal 0 C C
+S -700 -225 150 -675 0 1 0 N
+X Vi(+) 1 -800 -300 100 R 50 50 1 1 W
+X ON/OFF 2 -800 -450 100 R 50 50 1 1 I
+X Vi(-) 3 -800 -600 100 R 50 50 1 1 W
+X Vo(+) 4 250 -300 100 L 50 50 1 1 w
+X Trim 5 250 -450 100 L 50 50 1 1 I
+X Vo(-) 6 250 -600 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+#End Library
