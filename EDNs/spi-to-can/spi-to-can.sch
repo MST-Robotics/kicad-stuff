@@ -1,0 +1,295 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_CAN_LIN:MCP2515-EST U4
+U 1 1 5B821925
+P 7700 5500
+F 0 "U4" H 7700 6700 50  0000 C CNN
+F 1 "MCP2515-EST" H 7700 6600 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 7700 4600 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21801e.pdf" H 7800 4700 50  0001 C CNN
+	1    7700 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L URT_cache:ATA6560,1 U5
+U 1 1 5B822EF5
+P 9350 5200
+F 0 "U5" H 9350 5765 50  0000 C CNN
+F 1 "ATA6560,1" H 9350 5674 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9350 5700 50  0001 C CNN
+F 3 "" H 9350 5700 50  0001 C CNN
+	1    9350 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 4900 8700 5000
+Wire Wire Line
+	8300 4900 8550 4900
+$Comp
+L Device:R R5
+U 1 1 5B8F5E46
+P 10250 5150
+F 0 "R5" H 10320 5196 50  0000 L CNN
+F 1 "10k" H 10320 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10180 5150 50  0001 C CNN
+F 3 "~" H 10250 5150 50  0001 C CNN
+	1    10250 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5B900721
+P 10050 5500
+F 0 "R4" V 10150 5450 50  0000 L CNN
+F 1 "10k" V 9950 5450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9980 5500 50  0001 C CNN
+F 3 "~" H 10050 5500 50  0001 C CNN
+	1    10050 5500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9850 5500 9900 5500
+Wire Wire Line
+	10250 5000 10250 4900
+Wire Wire Line
+	9850 4900 10250 4900
+Text GLabel 7100 5100 0    50   Input ~ 0
+SS
+Text GLabel 7100 4900 0    50   Input ~ 0
+SI
+Text GLabel 7100 5000 0    50   Input ~ 0
+SO
+Text GLabel 7100 5200 0    50   Input ~ 0
+SCK
+Text GLabel 9850 5300 2    50   Input ~ 0
+CANL
+Text GLabel 9850 5100 2    50   Input ~ 0
+CANH
+$Comp
+L power:GND #PWR0105
+U 1 1 5B981ECF
+P 7700 6400
+F 0 "#PWR0105" H 7700 6150 50  0001 C CNN
+F 1 "GND" H 7705 6227 50  0000 C CNN
+F 2 "" H 7700 6400 50  0001 C CNN
+F 3 "" H 7700 6400 50  0001 C CNN
+	1    7700 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5B9092BA
+P 6400 5550
+F 0 "C5" H 6308 5504 50  0000 R CNN
+F 1 "15p" H 6308 5595 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6400 5550 50  0001 C CNN
+F 3 "~" H 6400 5550 50  0001 C CNN
+	1    6400 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5B90D930
+P 6900 5800
+F 0 "R1" H 6950 5850 50  0000 L CNN
+F 1 "1M" H 6950 5750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6830 5800 50  0001 C CNN
+F 3 "~" H 6900 5800 50  0001 C CNN
+	1    6900 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 5B90D9AD
+P 6550 5800
+F 0 "Y1" H 6500 5650 50  0000 L CNN
+F 1 "20MHz" H 6450 5950 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_0603-2Pin_6.0x3.5mm" H 6550 5800 50  0001 C CNN
+F 3 "~" H 6550 5800 50  0001 C CNN
+	1    6550 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 5B90DA09
+P 6400 6050
+F 0 "C6" H 6300 6100 50  0000 R CNN
+F 1 "15p" H 6300 6000 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6400 6050 50  0001 C CNN
+F 3 "~" H 6400 6050 50  0001 C CNN
+	1    6400 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6300 6050 6250 6050
+Wire Wire Line
+	6250 5550 6300 5550
+Wire Wire Line
+	6500 5550 6550 5550
+Wire Wire Line
+	6550 5550 6550 5650
+Wire Wire Line
+	6550 5950 6550 6050
+Wire Wire Line
+	6550 6050 6500 6050
+Wire Wire Line
+	6900 6050 6900 5950
+Wire Wire Line
+	6900 5550 6900 5650
+Text GLabel 8300 5900 2    50   Input ~ 0
+TX1
+Text GLabel 8300 6000 2    50   Input ~ 0
+TX2
+Text GLabel 8300 5600 2    50   Input ~ 0
+RX0
+Text GLabel 8300 5700 2    50   Input ~ 0
+RX1
+Text GLabel 8300 5800 2    50   Input ~ 0
+TX0
+Text GLabel 8300 5500 2    50   Input ~ 0
+INT
+Text GLabel 8300 6100 2    50   Input ~ 0
+Reset
+Wire Wire Line
+	8550 5500 8850 5500
+Wire Wire Line
+	8300 5000 8700 5000
+Wire Wire Line
+	8600 5300 8850 5300
+Wire Wire Line
+	7000 5550 7000 5700
+Wire Wire Line
+	6900 5550 7000 5550
+Wire Wire Line
+	7000 6050 7000 5800
+Wire Wire Line
+	6900 6050 7000 6050
+Wire Wire Line
+	6550 6050 6900 6050
+Connection ~ 6550 6050
+Connection ~ 6900 6050
+Wire Wire Line
+	6900 5550 6550 5550
+Connection ~ 6900 5550
+Connection ~ 6550 5550
+Wire Wire Line
+	7000 5700 7100 5700
+Wire Wire Line
+	7000 5800 7100 5800
+Wire Wire Line
+	8550 4900 8550 5500
+Wire Wire Line
+	6250 6050 6250 6400
+Wire Wire Line
+	6250 5550 6250 6050
+Connection ~ 6250 6050
+Wire Wire Line
+	8700 4900 8850 4900
+$Comp
+L power:GND #PWR0108
+U 1 1 5B9971B3
+P 10250 6400
+F 0 "#PWR0108" H 10250 6150 50  0001 C CNN
+F 1 "GND" H 10255 6227 50  0000 C CNN
+F 2 "" H 10250 6400 50  0001 C CNN
+F 3 "" H 10250 6400 50  0001 C CNN
+	1    10250 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5B997232
+P 8750 6400
+F 0 "#PWR0109" H 8750 6150 50  0001 C CNN
+F 1 "GND" H 8755 6227 50  0000 C CNN
+F 2 "" H 8750 6400 50  0001 C CNN
+F 3 "" H 8750 6400 50  0001 C CNN
+	1    8750 6400
+	1    0    0    -1  
+$EndComp
+Text Notes 6350 6800 0    100  Italic 0
+CAN Communication using MCP2515 and ATA6560
+Wire Wire Line
+	7700 6300 7700 6400
+$Comp
+L power:GND #PWR0111
+U 1 1 5BB213D3
+P 6250 6400
+F 0 "#PWR0111" H 6250 6150 50  0001 C CNN
+F 1 "GND" H 6255 6227 50  0000 C CNN
+F 2 "" H 6250 6400 50  0001 C CNN
+F 3 "" H 6250 6400 50  0001 C CNN
+	1    6250 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 6400 8750 5100
+Wire Wire Line
+	8750 5100 8850 5100
+$Comp
+L power:+5V #PWR0112
+U 1 1 5BB3269A
+P 7700 4650
+F 0 "#PWR0112" H 7700 4500 50  0001 C CNN
+F 1 "+5V" H 7700 4800 50  0000 C CNN
+F 2 "" H 7700 4650 50  0001 C CNN
+F 3 "" H 7700 4650 50  0001 C CNN
+	1    7700 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0113
+U 1 1 5BB36754
+P 8600 4650
+F 0 "#PWR0113" H 8600 4500 50  0001 C CNN
+F 1 "+5V" H 8600 4800 50  0000 C CNN
+F 2 "" H 8600 4650 50  0001 C CNN
+F 3 "" H 8600 4650 50  0001 C CNN
+	1    8600 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 4650 7700 4700
+Wire Wire Line
+	8600 4650 8600 5300
+Wire Wire Line
+	10250 5300 10250 6400
+$Comp
+L power:+5V #PWR0114
+U 1 1 5BB4B63A
+P 10500 4650
+F 0 "#PWR0114" H 10500 4500 50  0001 C CNN
+F 1 "+5V" H 10500 4800 50  0000 C CNN
+F 2 "" H 10500 4650 50  0001 C CNN
+F 3 "" H 10500 4650 50  0001 C CNN
+	1    10500 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 5500 10500 5500
+Wire Wire Line
+	10500 5500 10500 4650
+Wire Notes Line
+	5900 6900 10700 6900
+Wire Notes Line
+	10700 6900 10700 4200
+Wire Notes Line
+	10700 4200 5900 4200
+Wire Notes Line
+	5900 4200 5900 6900
+NoConn ~ 7100 5900
+$EndSCHEMATC
